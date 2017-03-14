@@ -110,7 +110,7 @@ def get_userInfo(access_token):
 
 def get_topArtist(access_token):
     headers = {'Authorization': 'Bearer ' + access_token}
-    response = requests.get("https://api.spotify.com/v1/me/top/artists?limit=50&offset=0", headers=headers)
+    response = requests.get("https://api.spotify.com/v1/me/top/artists?limit=25&offset=0", headers=headers)
     artist_json = response.json()
     return artist_json
 
